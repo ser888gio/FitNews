@@ -11,23 +11,95 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.625rem 1.25rem; /* 10px 20px */
+  padding: 0.625rem 1.25rem;
   background-color: #f3f3f3;
-  border-bottom: 0.125rem solid #333; /* 2px */
+  border-bottom: 0.125rem solid #333;
 }
 
-/* Logo styling */
 .header .logo {
   display: flex;
   align-items: center;
 }
 
 .header .logo img {
-  height: 1.875rem; /* 30px */
-  margin-right: 0.625rem; /* 10px */
+  height: 1.875rem;
+  margin-right: 0.625rem;
 }
 
-/* Navigation styling */
+.header .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 1rem;
+}
+
+.header .nav-links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.header .nav-links a:hover {
+  text-decoration: underline;
+}
+
+.header .search-box {
+  display: flex;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+  right: 0;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #f3f3f3;
+    padding: 1rem;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .header .nav-links a {
+    padding: 0.5rem 0;
+  }
+
+  .menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+}
+
+.header .logo img {
+  height: 1.875rem;
+  margin-right: 0.625rem;
+}
+
 .header .nav-links {
   display: flex;
   align-items: center;
@@ -44,7 +116,6 @@ body {
   text-decoration: underline;
 }
 
-/* Search box styling */
 .header .search-box {
   display: flex;
   align-items: center;
@@ -77,13 +148,13 @@ body {
 
 input {
   padding: var(--pad);
-  border-radius: 0.5rem; /* 8px */
+  border-radius: 0.5rem;
   background-color: var(--bg);
   border: 1px solid #eee;
   color: inherit;
-  width: 18.75rem; /* 300px */
+  width: 18.75rem;
   outline: none;
-  font-size: 1rem; /* 16px */
+  font-size: 1rem;
 }
 
 .floating-label {
@@ -102,11 +173,10 @@ input:focus + .floating-label,
 input:not(:placeholder-shown) + .floating-label {
   top: 0;
   transform: translateY(-100%);
-  font-size: 0.75rem; /* 12px */
+  font-size: 0.75rem;
   color: #333;
 }
 
-/* Dropdown styling */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -120,8 +190,8 @@ input:not(:placeholder-shown) + .floating-label {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 20rem; /* 320px */
-  box-shadow: 0px 0.5rem 1rem 0px rgba(0, 0, 0, 0.2); /* 8px 16px */
+  min-width: 20rem;
+  box-shadow: 0px 0.5rem 1rem 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   padding: 0.625rem;
   gap: 0.625rem;
@@ -134,7 +204,7 @@ input:not(:placeholder-shown) + .floating-label {
 
 .dropdown-menu a {
   color: black;
-  padding: 0.5rem 0.75rem; /* 8px 12px */
+  padding: 0.5rem 0.75rem;
   text-decoration: none;
   display: block;
 }
@@ -143,7 +213,6 @@ input:not(:placeholder-shown) + .floating-label {
   background-color: #f1f1f1;
 }
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-menu {
   display: flex;
 }
@@ -246,16 +315,16 @@ input:focus {
 }
 
 .hero-image {
-  margin-right: 1rem; /* Adjust as needed */
+  margin-right: 1rem;
 }
 
 .hero-image img {
-  height: 30rem; /* Adjust as needed */
-  width: auto; /* Adjust as needed */
+  height: 30rem;
+  width: auto;
 }
 
 aside {
-  margin-left: 1rem; /* Adjust as needed */
+  margin-left: 1rem;
 }
 
 .articles-section {
@@ -479,7 +548,6 @@ a {
   font-weight: bold;
 }
 
-/* Hero section */
 .newsletter-hero {
   display: flex;
   background-color: #444;
@@ -487,7 +555,6 @@ a {
   gap: 25px;
 }
 
-/* Left column */
 .newsletter-hero .text-content {
   flex: 1;
 }
@@ -504,7 +571,6 @@ a {
   color: #fff;
 }
 
-/* Right column (form) */
 .newsletter-hero .form-content {
   display: flex;
   flex-direction: column;
@@ -562,7 +628,7 @@ footer {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-color: #f8f8f8; /* Adjust as needed */
+  background-color: #f8f8f8;
 }
 
 .footer-columns > .footer-column {
