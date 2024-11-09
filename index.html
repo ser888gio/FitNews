@@ -3,27 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="School project for Web Design Class" />
+    <meta
+      name="description"
+      content="FitNews - Váš zdroj sportovních novinek a analýz"
+    />
     <meta
       name="author"
       content="Jakub Šiman, Sergiu Nica, Matthias Köhler, Martin Davidík"
     />
     <meta name="copyright" content="FitNews" />
 
-    <!-- Add meta tags-->
+    <!-- Social Media Meta Tags -->
     <meta property="og:title" content="FitNews" />
     <meta
       property="og:description"
       content="Find the latest and the most important sport news here."
     />
-    <meta property="og:image" content="https://example.com/image.jpg" />
-    <!-- URL of the image displayed when shared-->
-    <meta property="og:type" content="Website for sport articles" />
-    <link rel="stylesheet" href="styles.css" />
+    <meta property="og:image" content="/images/social-share.jpg" />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="styles.css" as="style" />
+    <link
+      rel="preload"
+      href="/fonts/font-file.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="/css/styles.css" />
     <title>FitNews</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" role="banner">
       <div class="logo">
         <img src="./img/logo.svg" alt="FitNews logo" />
       </div>
@@ -31,6 +43,7 @@
         <a href="#">Domovská stránka</a>
         <div class="dropdown">
           <a href="#" class="dropdown-toggle">Kategorie</a>
+          <img src="/img/chevron-down-icon.svg" alt="Arrow down" />
           <div class="dropdown-menu">
             <div class="dropdown-col-1">
               <a href="#">Fotbal</a>
@@ -51,8 +64,14 @@
       </nav>
 
       <div class="search-box">
-        <input type="text" placeholder="Vyhledat" aria-label="Search Input" />
-        <i src="/img/search-icon.svg" alt="Search icon"></i>
+        <label for="search-input" class="floating-label">Vyhledat</label>
+        <input
+          type="text"
+          id="search-input"
+          placeholder=" "
+          aria-label="Search Input"
+        />
+        <img src="/img/search-icon.svg" alt="Search icon" />
       </div>
     </header>
 
@@ -66,8 +85,18 @@
         <button class="btn">Přečíst</button>
         <button class="btn">Zaregistrovat</button>
       </div>
-      <div class="hero-image">
-        <img src="./img/hero-image.svg" alt="Players running" />
+      <div class="hero-image-container">
+        <div class="hero-image">
+          <img
+            src="./img/hero-image.svg"
+            alt="Players running"
+            height="1rem"
+            width="1rem"
+          />
+        </div>
+        <aside>
+          Nejčtenější sportovní online magazín roku 2021, 2022, 2023, 2024
+        </aside>
       </div>
     </main>
 
@@ -215,76 +244,78 @@
 
     <div class="container">
       <div class="event large">
-        <img src="https://via.placeholder.com/150" alt="Event Image" />
+        <img src="https://picsum.photos/150" alt="Event Image" />
         <div class="date">Út<br /><strong>06</strong><br />Úno 2024</div>
         <button class="tag">Fotbal</button>
         <h3>Mistrovství světa</h3>
         <p>Londýn</p>
         <p>Největší fotbalový turnaj na světě začíná v Londýně.</p>
-        <a href="#">Zobrazit událost →</a>
+        <a href="#">Zobrazit událost <img src="/img/next-icon.svg" /></a>
       </div>
       <div class="event">
-        <img src="https://via.placeholder.com/150" alt="Event Image" />
+        <img src="https://picsum.photos/150" alt="Event Image" />
         <div class="date">Čt<br /><strong>08</strong><br />Úno 2024</div>
         <button class="tag">Atletika</button>
         <h3>Mistrovství Evropy</h3>
         <p>Paříž</p>
         <p>Atleti z celé Evropy se sjedou do Paříže na mistrovství.</p>
-        <a href="#">Zobrazit událost →</a>
+        <a href="#"
+          >Zobrazit událost <img src="/img/next-icon.svg" height="10px"
+        /></a>
       </div>
       <div class="event">
-        <img src="https://via.placeholder.com/150" alt="Event Image" />
+        <img src="https://picsum.photos/150" alt="Event Image" />
         <div class="date">Čt<br /><strong>08</strong><br />Úno 2024</div>
         <button class="tag">Atletika</button>
         <h3>Mistrovství Evropy</h3>
         <p>Paříž</p>
         <p>Atleti z celé Evropy se sjedou do Paříže na mistrovství.</p>
-        <a href="#">Zobrazit událost →</a>
+        <a href="#">Zobrazit událost <img src="/img/next-icon.svg" /></a>
       </div>
       <div class="event">
-        <img src="https://via.placeholder.com/150" alt="Event Image" />
+        <img src="https://picsum.photos/150" alt="Event Image" />
         <div class="date">Čt<br /><strong>08</strong><br />Úno 2024</div>
         <button class="tag">Atletika</button>
         <h3>Mistrovství Evropy</h3>
         <p>Paříž</p>
         <p>Atleti z celé Evropy se sjedou do Paříže na mistrovství.</p>
-        <a href="#">Zobrazit událost →</a>
+        <a href="#">Zobrazit událost <img src="/img/next-icon.svg" /></a>
       </div>
       <div class="event large">
-        <img src="https://via.placeholder.com/150" alt="Event Image" />
+        <img src="https://picsum.photos/150" alt="Event Image" />
         <div class="date">Út<br /><strong>06</strong><br />Úno 2024</div>
         <button class="tag">Fotbal</button>
         <h3>Mistrovství světa</h3>
         <p>Londýn</p>
         <p>Největší fotbalový turnaj na světě začíná v Londýně.</p>
-        <a href="#">Zobrazit událost →</a>
+        <a href="#">Zobrazit událost <img src="/img/next-icon.svg" /></a>
       </div>
       <div class="event">
-        <img src="https://via.placeholder.com/150" alt="Event Image" />
+        <img src="https://picsum.photos/150" alt="Event Image" />
         <div class="date">Čt<br /><strong>08</strong><br />Úno 2024</div>
         <button class="tag">Atletika</button>
         <h3>Mistrovství Evropy</h3>
         <p>Paříž</p>
         <p>Atleti z celé Evropy se sjedou do Paříže na mistrovství.</p>
-        <a href="#">Zobrazit událost →</a>
+        <a href="#">Zobrazit událost <img src="/img/next-icon.svg" /></a>
       </div>
       <div class="event">
-        <img src="https://via.placeholder.com/150" alt="Event Image" />
+        <img src="https://picsum.photos/150" alt="Event Image" />
         <div class="date">Čt<br /><strong>08</strong><br />Úno 2024</div>
         <button class="tag">Atletika</button>
         <h3>Mistrovství Evropy</h3>
         <p>Paříž</p>
         <p>Atleti z celé Evropy se sjedou do Paříže na mistrovství.</p>
-        <a href="#">Zobrazit událost →</a>
+        <a href="#">Zobrazit událost <img src="/img/next-icon.svg" /></a>
       </div>
       <div class="event">
-        <img src="https://via.placeholder.com/150" alt="Event Image" />
+        <img src="https://picsum.photos/150" alt="Event Image" />
         <div class="date">Čt<br /><strong>08</strong><br />Úno 2024</div>
         <button class="tag">Atletika</button>
         <h3>Mistrovství Evropy</h3>
         <p>Paříž</p>
         <p>Atleti z celé Evropy se sjedou do Paříže na mistrovství.</p>
-        <a href="#">Zobrazit událost →</a>
+        <a href="#">Zobrazit událost <img src="/img/next-icon.svg" /></a>
       </div>
       <!-- Repeat for additional events -->
     </div>
