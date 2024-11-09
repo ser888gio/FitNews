@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="School project for Web Design Class" />
+    <meta
+      name="author"
+      content="Jakub Šiman, Sergiu Nica, Matthias Köhler, Martin Davidík"
+    />
+    <meta name="copyright" content="FitNews" />
+
+    <!-- Add meta tags-->
+    <meta property="og:title" content="FitNews" />
+    <meta
+      property="og:description"
+      content="Find the latest and the most important sport news here."
+    />
+    <meta property="og:image" content="https://example.com/image.jpg" />
+    <!-- URL of the image displayed when shared-->
+    <meta property="og:type" content="Website for sport articles" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>FitNews</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="./img/logo.svg" alt="FitNews logo" />
+      </div>
+      <nav class="nav-links">
+        <a href="#">Domovská stránka</a>
+        <div class="dropdown">
+          <a href="#" class="dropdown-toggle">Kategorie</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-col-1">
+              <a href="#">Fotbal</a>
+              <a href="#">Basketbal</a>
+              <a href="#">Rugby</a>
+              <a href="#">Baseball</a>
+            </div>
+            <div class="dropdown-col-2">
+              <a href="#">Bowling</a>
+              <a href="#">Tennis</a>
+              <a href="#">Fitness</a>
+              <a href="#">Životní styl</a>
+            </div>
+          </div>
+        </div>
+        <a href="#">Předplatné</a>
+        <a href="#">O nás</a>
+      </nav>
+
+      <div class="search-box">
+        <input type="text" placeholder="Vyhledat" aria-label="Search Input" />
+        <i src="/img/search-icon.svg" alt="Search icon"></i>
+      </div>
+    </header>
+
+    <main class="hero">
+      <h1>FitNews – váš zdroj sportovních novinek a analýz.</h1>
+      <p>
+        Sledujte nejnovější trendy ve sportu a získejte inspiraci pro svůj
+        aktivní životní styl.
+      </p>
+      <div class="buttons">
+        <button class="btn">Přečíst</button>
+        <button class="btn">Zaregistrovat</button>
+      </div>
+      <div class="hero-image">
+        <img src="./img/hero-image.svg" alt="Players running" />
+      </div>
+    </main>
+
+    <section class="articles-section">
+      <h2>Nejnovější sportovní články</h2>
+      <p>Zůstaňte informováni o sportovních událostech.</p>
+
+      <div class="card-container">
+        <!-- Card 1 -->
+        <article class="card">
+          <img src="/img/card1-image.svg" alt="Running and Stopwatch" />
+          <div class="card-content">
+            <div class="card-labels">
+              <span class="label">Životní styl</span>
+              <span>5 min čtení</span>
+            </div>
+            <h3 class="card-title">Jak zlepšit svou výkonnost</h3>
+            <p class="card-description">
+              Tipy pro zvýšení vaší sportovní výkonnosti a zdraví.
+            </p>
+            <a href="#" class="read-more"
+              >Číst více
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M5 12h14M13 5l7 7-7 7"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card">
+          <img src="/img/card2-image.svg" alt="Plate with Healthy Food" />
+          <div class="card-content">
+            <div class="card-labels">
+              <span class="label">Fitness</span>
+              <span>5 min čtení</span>
+            </div>
+            <h3 class="card-title">Zdravé stravování pro aktivní život</h3>
+            <p class="card-description">
+              Jak se stravovat, abyste měli více energie.
+            </p>
+            <a href="#" class="read-more"
+              >Číst více
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M5 12h14M13 5l7 7-7 7"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card">
+          <img src="/img/card3-image.svg" alt="Football Ball" />
+          <div class="card-content">
+            <div class="card-labels">
+              <span class="label">Fotbal</span>
+              <span>5 min čtení</span>
+            </div>
+            <h3 class="card-title">Zápas týdne: Analýza</h3>
+            <p class="card-description">
+              Podívejte se na klíčové momenty posledního zápasu.
+            </p>
+            <a href="#" class="read-more"
+              >Číst více
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M5 12h14M13 5l7 7-7 7"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <button class="view-more">Zobrazit vše</button>
+    </section>
+
+    <div class="categories-section">
+      <h2>Objevte naše hlavní sportovní kategorie</h2>
+      <p>
+        Naše platforma nabízí široké spektrum sportovních zpráv. Sledujte
+        nejnovější trendy a události ve světě sportu.
+      </p>
+
+      <div class="category-container">
+        <!-- Card 1 -->
+        <div class="category-card">
+          <img src="/img/football-icon.svg" alt="Football icon" />
+          <h3>Fotbalové zprávy</h3>
+          <p>
+            Nejnovější informace a analýzy z fotbalového světa, které vás udrží
+            v obraze.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="category-card">
+          <img src="/img/basketball-icon.svg" alt="Basketball icon" />
+          <h3>Basketbalové novinky</h3>
+          <p>
+            Sledujte vzrušující zápasy a příběhy z basketbalových lig po celém
+            světě.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="category-card">
+          <img src="/img/dumbell-icon.svg" alt="Dumbell icon" />
+          <h3>Fitness trendy</h3>
+          <p>
+            Objevte nejnovější fitness trendy a tipy pro zdravý životní styl.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="category-card">
+          <img src="/img/dots-icon.svg" alt="More icon" />
+          <h3>Další kategorie</h3>
+          <p>
+            Prozkoumejte další sportovní kategorie a zůstaňte informováni o
+            všech novinkách.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="event large">
+        <img src="https://via.placeholder.com/150" alt="Event Image" />
+        <div class="date">Út<br /><strong>06</strong><br />Úno 2024</div>
+        <button class="tag">Fotbal</button>
+        <h3>Mistrovství světa</h3>
+        <p>Londýn</p>
+        <p>Největší fotbalový turnaj na světě začíná v Londýně.</p>
+        <a href="#">Zobrazit událost →</a>
+      </div>
+      <div class="event">
+        <img src="https://via.placeholder.com/150" alt="Event Image" />
+        <div class="date">Čt<br /><strong>08</strong><br />Úno 2024</div>
+        <button class="tag">Atletika</button>
+        <h3>Mistrovství Evropy</h3>
+        <p>Paříž</p>
+        <p>Atleti z celé Evropy se sjedou do Paříže na mistrovství.</p>
+        <a href="#">Zobrazit událost →</a>
+      </div>
+      <div class="event">
+        <img src="https://via.placeholder.com/150" alt="Event Image" />
+        <div class="date">Čt<br /><strong>08</strong><br />Úno 2024</div>
+        <button class="tag">Atletika</button>
+        <h3>Mistrovství Evropy</h3>
+        <p>Paříž</p>
+        <p>Atleti z celé Evropy se sjedou do Paříže na mistrovství.</p>
+        <a href="#">Zobrazit událost →</a>
+      </div>
+      <div class="event">
+        <img src="https://via.placeholder.com/150" alt="Event Image" />
+        <div class="date">Čt<br /><strong>08</strong><br />Úno 2024</div>
+        <button class="tag">Atletika</button>
+        <h3>Mistrovství Evropy</h3>
+        <p>Paříž</p>
+        <p>Atleti z celé Evropy se sjedou do Paříže na mistrovství.</p>
+        <a href="#">Zobrazit událost →</a>
+      </div>
+      <div class="event large">
+        <img src="https://via.placeholder.com/150" alt="Event Image" />
+        <div class="date">Út<br /><strong>06</strong><br />Úno 2024</div>
+        <button class="tag">Fotbal</button>
+        <h3>Mistrovství světa</h3>
+        <p>Londýn</p>
+        <p>Největší fotbalový turnaj na světě začíná v Londýně.</p>
+        <a href="#">Zobrazit událost →</a>
+      </div>
+      <div class="event">
+        <img src="https://via.placeholder.com/150" alt="Event Image" />
+        <div class="date">Čt<br /><strong>08</strong><br />Úno 2024</div>
+        <button class="tag">Atletika</button>
+        <h3>Mistrovství Evropy</h3>
+        <p>Paříž</p>
+        <p>Atleti z celé Evropy se sjedou do Paříže na mistrovství.</p>
+        <a href="#">Zobrazit událost →</a>
+      </div>
+      <div class="event">
+        <img src="https://via.placeholder.com/150" alt="Event Image" />
+        <div class="date">Čt<br /><strong>08</strong><br />Úno 2024</div>
+        <button class="tag">Atletika</button>
+        <h3>Mistrovství Evropy</h3>
+        <p>Paříž</p>
+        <p>Atleti z celé Evropy se sjedou do Paříže na mistrovství.</p>
+        <a href="#">Zobrazit událost →</a>
+      </div>
+      <div class="event">
+        <img src="https://via.placeholder.com/150" alt="Event Image" />
+        <div class="date">Čt<br /><strong>08</strong><br />Úno 2024</div>
+        <button class="tag">Atletika</button>
+        <h3>Mistrovství Evropy</h3>
+        <p>Paříž</p>
+        <p>Atleti z celé Evropy se sjedou do Paříže na mistrovství.</p>
+        <a href="#">Zobrazit událost →</a>
+      </div>
+      <!-- Repeat for additional events -->
+    </div>
+
+    <div class="newsletter-hero">
+      <div class="text-content">
+        <h2>Přihlaste se k našemu newsletteru</h2>
+        <p>
+          Získejte nejnovější sportovní zprávy přímo do vaší schránky a
+          nezmeškejte žádnou novinku!
+        </p>
+      </div>
+      <div class="form-content">
+        <input
+          type="email"
+          placeholder="Zadejte svůj e-mail"
+          aria-label="e-mail input"
+        />
+        <button>Přihlásit se</button>
+        <p class="disclaimer">
+          Kliknutím na Přihlásit se souhlasíte s našimi Podmínkami a ujednáními.
+        </p>
+      </div>
+    </div>
+
+    <footer class="footer-columns">
+      <div class="footer-column" id="col-0">
+        <img src="./img/logo.svg" alt="FitNews logo" />
+      </div>
+      <nav class="footer-column" id="col-1">
+        <ul>
+          <li><a href="#">O nás</a></li>
+          <li><a href="#">Kontakty</a></li>
+          <li><a href="#">Novinky</a></li>
+          <li><a href="#">Předplatné</a></li>
+          <li><a href="#">Sociální sítě</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-column" id="col-2">
+        <ul>
+          <li><a href="#">Zásady ochrany</a></li>
+          <li><a href="#">Podmínky služby</a></li>
+          <li><a href="#">Nastavení cookies</a></li>
+        </ul>
+      </nav>
+      <div class="legal">
+        <p>
+          &copy; 2024 FitNews. Všechna práva vyhrazena. Studenstký projekt:
+          Jakub Šiman, Sergiu Nica, Matthias Köhler, Martin Davidík
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
