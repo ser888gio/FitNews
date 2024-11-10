@@ -27,6 +27,8 @@
       <div class="logo">
         <img src="./img/logo.svg" alt="FitNews logo" />
       </div>
+      <input type="checkbox" id="check" class="menu-toggle" />
+      <label for="check" class="menu-icon">☰</label>
       <nav class="nav-links">
         <a href="#">Domovská stránka</a>
         <div class="dropdown">
@@ -48,18 +50,21 @@
         </div>
         <a href="#">Předplatné</a>
         <a href="#">O nás</a>
+        <div class="search-box">
+          <label for="search-input" class="floating-label">Vyhledat</label>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Vyhledat"
+            aria-label="Search Input"
+          />
+          <img src="/img/search-icon.svg" alt="Search icon" />
+        </div>
       </nav>
-      <div class="search-box">
-        <label for="search-input" class="floating-label">Vyhledat</label>
-        <input type="text" placeholder="Vyhledat" aria-label="Search Input" />
-        <img src="/img/search-icon.svg" alt="Search icon" />
-      </div>
-      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-      <label for="menu-toggle" class="menu-icon">☰</label>
     </header>
 
     <main class="hero">
-      <h1>FitNews – váš zdroj sportovních novinek a analýz.</h1>
+      <h1>FitNews - váš zdroj sportovních novinek a analýz.</h1>
       <p>
         Sledujte nejnovější trendy ve sportu a získejte inspiraci pro svůj
         aktivní životní styl.
@@ -70,12 +75,7 @@
       </div>
       <div class="hero-image-container">
         <div class="hero-image">
-          <img
-            src="./img/hero-image.svg"
-            alt="Players running"
-            height="1rem"
-            width="1rem"
-          />
+          <img src="./img/hero-image.svg" alt="Players running" />
         </div>
         <aside>
           Naše sportovní online médium získalo ocenění za nejčtenější sportovní
@@ -97,7 +97,6 @@
       <p>Zůstaňte informováni o sportovních událostech.</p>
 
       <div class="card-container">
-        <!-- Card 1 -->
         <article class="card">
           <img src="/img/card1-image.svg" alt="Running and Stopwatch" />
           <div class="card-content">
@@ -124,8 +123,6 @@
             </a>
           </div>
         </article>
-
-        <!-- Card 2 -->
         <article class="card">
           <img src="/img/card2-image.svg" alt="Plate with Healthy Food" />
           <div class="card-content">
@@ -152,8 +149,6 @@
             </a>
           </div>
         </article>
-
-        <!-- Card 3 -->
         <article class="card">
           <img src="/img/card3-image.svg" alt="Football Ball" />
           <div class="card-content">
@@ -240,6 +235,15 @@
         <p>Největší fotbalový turnaj na světě začíná v Londýně.</p>
         <a href="#">Zobrazit událost </a>
       </div>
+      <div class="event large">
+        <img src="https://picsum.photos/150" alt="Event Image" />
+        <div class="date">Út<br /><strong>06</strong><br />Úno 2024</div>
+        <button class="tag">Fotbal</button>
+        <h3>Mistrovství světa</h3>
+        <p>Londýn</p>
+        <p>Největší fotbalový turnaj na světě začíná v Londýně.</p>
+        <a href="#">Zobrazit událost </a>
+      </div>
       <div class="event">
         <img src="https://picsum.photos/150" alt="Event Image" />
         <div class="date">Čt<br /><strong>08</strong><br />Úno 2024</div>
@@ -267,15 +271,7 @@
         <p>Atleti z celé Evropy se sjedou do Paříže na mistrovství.</p>
         <a href="#">Zobrazit událost </a>
       </div>
-      <div class="event large">
-        <img src="https://picsum.photos/150" alt="Event Image" />
-        <div class="date">Út<br /><strong>06</strong><br />Úno 2024</div>
-        <button class="tag">Fotbal</button>
-        <h3>Mistrovství světa</h3>
-        <p>Londýn</p>
-        <p>Největší fotbalový turnaj na světě začíná v Londýně.</p>
-        <a href="#">Zobrazit událost </a>
-      </div>
+
       <div class="event">
         <img src="https://picsum.photos/150" alt="Event Image" />
         <div class="date">Čt<br /><strong>08</strong><br />Úno 2024</div>
