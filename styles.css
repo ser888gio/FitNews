@@ -91,9 +91,6 @@ a {
   padding: 0.75rem 1.25rem;
 }
 
-.nav-links li {
-  padding-left: 30px;
-}
 .nav-links li a {
   display: inline-block;
   text-decoration: none;
@@ -255,12 +252,9 @@ label {
 .hero-image-container {
   display: flex;
   align-items: center;
+  width: 200rem;
 }
 
-.hero-image img {
-  height: auto;
-  width: auto;
-}
 aside {
   margin-left: 1rem;
   max-width: 20rem;
