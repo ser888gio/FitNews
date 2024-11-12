@@ -1,7 +1,15 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  position: relative;
+}
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0.625rem 1.25rem;
   background-color: #f3f3f3;
   border-bottom: 0.125rem solid #333;
@@ -14,23 +22,17 @@
   height: 1.875rem;
   margin-right: 0.625rem;
 }
-.header .nav-links {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  font-size: 1rem;
-}
-.header .nav-links a {
+
+.header .menu a {
   color: #333;
   text-decoration: none;
+  justify-content: space-between;
 }
-.header .nav-links a:hover {
+.header .menu a:hover {
   text-decoration: underline;
 }
-.header .search-box {
-  display: flex;
-  align-items: center;
-  margin-right: auto;
+.search-box:focus-within {
+  outline: thick double #32a1ce;
 }
 .menu-toggle {
   display: none;
@@ -41,7 +43,7 @@
   cursor: pointer;
 }
 @media (max-width: 768px) {
-  .header .nav-links {
+  .header .menu {
     display: none;
     flex-direction: column;
     position: absolute;
@@ -61,27 +63,6 @@
   .menu-icon {
     display: block;
   }
-}
-.header .logo {
-  display: flex;
-  align-items: center;
-}
-.header .logo img {
-  height: 1.875rem;
-  margin-right: 0.625rem;
-}
-.header .nav-links {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  font-size: 16px;
-}
-.header .nav-links a {
-  color: #333;
-  text-decoration: none;
-}
-.header .nav-links a:hover {
-  text-decoration: underline;
 }
 .header .search-box {
   display: flex;
@@ -121,6 +102,92 @@
 }
 .label-search {
   display: none;
+}
+.nav-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  background-color: var(--color2);
+  padding: 12px 20px;
+}
+.logo img {
+  width: 40px;
+}
+.nav-links li {
+  padding-left: 30px;
+}
+.nav-links li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color1);
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+}
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color1);
+  transition: 0.15s ease-in-out;
+}
+.nav-links li a:hover:after {
+  width: 100%;
+}
+.close-menu,
+.open-menu {
+  position: absolute;
+  color: var(--color1);
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+.open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.close-menu {
+  top: 20px;
+  right: 20px;
+}
+#check {
+  display: none;
+}
+@media (max-width: 610px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: var(--color2);
+    transition: all 0.2s ease-in-out;
+  }
+  .nav-links li {
+    margin-top: 40px;
+  }
+  .nav-links li a {
+    padding: 10px;
+  }
+  .close-menu,
+  .open-menu {
+    display: block;
+  }
+  #check:checked ~ .menu {
+    right: 0;
+  }
 }
 .dropdown {
   position: relative;
@@ -164,6 +231,8 @@
 }
 .menu {
   display: flex;
+  justify-content: space-between;
+  gap: 2rem;
 }
 .menu li {
   padding-left: 30px;
@@ -292,6 +361,11 @@ input:focus {
   height: auto;
   object-fit: cover;
 }
+@media (max-width: 768px) {
+  .hero img {
+    width: 100%;
+  }
+}
 .hero-image-container {
   display: flex;
   align-items: center;
@@ -331,6 +405,8 @@ aside {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 .card {
   width: 100%;
@@ -412,7 +488,7 @@ aside {
 .categories-section {
   width: 100%;
   text-align: center;
-  padding: 40px 20px;
+  padding-block: 2.5rem 1.25rem;
   background-color: #e9f6f2;
 }
 .categories-section h2 {
@@ -431,6 +507,9 @@ aside {
   justify-content: space-around;
   gap: 20px;
   flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: center;
 }
 .category-card {
   flex: 1;
@@ -593,7 +672,6 @@ footer {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 1200px;
   margin-bottom: 20px;
 }
 .footer-column {
@@ -696,4 +774,7 @@ footer {
 }
 .label-email {
   color: #fff;
+}
+input:focus {
+  outline: thick double #32a1ce;
 }

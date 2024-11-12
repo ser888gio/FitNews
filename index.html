@@ -24,32 +24,32 @@
   </head>
   <body>
     <header class="header" role="banner">
-      <div class="logo">
-        <img src="./img/logo.svg" alt="FitNews logo" />
-      </div>
-      <input type="checkbox" id="check" class="menu-toggle" />
-      <label for="check" class="menu-icon">☰</label>
       <nav class="nav-links">
-        <a href="#">Domovská stránka</a>
-        <div class="dropdown">
-          <a href="#" class="dropdown-toggle">Kategorie</a>
-          <div class="dropdown-menu">
-            <div class="dropdown-col-1">
-              <a href="#">Fotbal</a>
-              <a href="#">Basketbal</a>
-              <a href="#">Rugby</a>
-              <a href="#">Baseball</a>
-            </div>
-            <div class="dropdown-col-2">
-              <a href="#">Bowling</a>
-              <a href="#">Tennis</a>
-              <a href="#">Fitness</a>
-              <a href="#">Životní styl</a>
+        <div class="logo">
+          <img src="./img/logo.svg" alt="FitNews logo" />
+        </div>
+        <div class="menu">
+          <a href="#">Domovská stránka</a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">Kategorie</a>
+            <div class="dropdown-menu">
+              <div class="dropdown-col-1">
+                <a href="#">Fotbal</a>
+                <a href="#">Basketbal</a>
+                <a href="#">Rugby</a>
+                <a href="#">Baseball</a>
+              </div>
+              <div class="dropdown-col-2">
+                <a href="#">Bowling</a>
+                <a href="#">Tennis</a>
+                <a href="#">Fitness</a>
+                <a href="#">Životní styl</a>
+              </div>
             </div>
           </div>
+          <a href="#">Předplatné</a>
+          <a href="#">O nás</a>
         </div>
-        <a href="#">Předplatné</a>
-        <a href="#">O nás</a>
         <div class="search-box">
           <label for="search-input" class="label-search">Vyhledat</label>
           <input
@@ -60,6 +60,10 @@
           />
           <img src="/img/search-icon.svg" alt="Search icon" />
         </div>
+        <label for="check" class="close-menu"
+          ><i class="fas fa-times"></i
+        ></label>
+        <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
       </nav>
     </header>
 
