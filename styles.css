@@ -6,11 +6,16 @@ body {
   background-color: #f8f8f8;
   position: relative;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 .header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 0.625rem 1.25rem;
+  padding-block: 0.625rem 1.25rem;
   background-color: #f3f3f3;
   border-bottom: 0.125rem solid #333;
 }
@@ -51,11 +56,11 @@ body {
     left: 0;
     width: 100%;
     background-color: #f3f3f3;
-    padding: 1rem;
+    padding-block: 1rem;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
   .header .nav-links a {
-    padding: 0.5rem 0;
+    padding-block: 0.5rem 0;
   }
   .menu-toggle:checked + .menu-icon + .nav-links {
     display: flex;
@@ -245,6 +250,9 @@ body {
   transition: 0.15s ease-in-out;
   position: relative;
   text-transform: uppercase;
+  color: #333;
+  text-decoration: none;
+  font-weight: 700;
 }
 .menu li a::after {
   content: "";
@@ -560,6 +568,9 @@ aside {
   .large {
     grid-column: span 2;
   }
+  .hero-image-container {
+    flex-direction: column;
+  }
 }
 @media (max-width: 480px) {
   .container {
@@ -592,15 +603,14 @@ h3 {
   font-weight: 700;
 }
 a {
-  color: #333;
-  text-decoration: none;
-  font-weight: 700;
+  color: black;
 }
 .newsletter-hero {
   display: flex;
   background-color: #444;
   padding: 20px;
   gap: 25px;
+  flex-wrap: wrap;
 }
 .newsletter-hero .text-content {
   flex: 1;
