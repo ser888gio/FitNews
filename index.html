@@ -19,6 +19,12 @@
     />
     <meta property="og:image" content="/images/social-share.jpg" />
     <meta property="og:type" content="website" />
+
+    <link rel="preload" href="styles.css" as="style" />
+    <link rel="preload" href="img/hero-image.svg" as="image" />
+    <link rel="preload" href="img/card.svg" as="image" />
+    <link rel="preload" href="img/event.svg" as="image" />
+
     <link rel="stylesheet" href="styles.css" as="style" />
     <title>FitNews</title>
   </head>
@@ -78,7 +84,7 @@
         <div class="hero-image">
           <img src="./img/hero-image.svg" alt="Players running" />
         </div>
-        <aside>
+        <aside loading="lazy">
           Naše sportovní online médium získalo ocenění za nejčtenější sportovní
           magazín po čtyři roky v řadě, a to v letech 2021, 2022, 2023 a 2024.
           Tento úspěch dokládá naši schopnost přinášet čtenářům aktuální,
@@ -99,7 +105,7 @@
 
       <div class="card-container">
         <article class="card">
-          <img src="/img/card1-image.svg" alt="Running and Stopwatch" />
+          <img src="/img/card.svg" alt="Running and Stopwatch" />
           <div class="card-content">
             <div class="card-labels">
               <span class="label">Životní styl</span>
@@ -113,7 +119,7 @@
           </div>
         </article>
         <article class="card">
-          <img src="/img/card1-image.svg" alt="Running and Stopwatch" />
+          <img src="/img/card.svg" alt="Running and Stopwatch" />
           <div class="card-content">
             <div class="card-labels">
               <span class="label">Životní styl</span>
@@ -127,7 +133,7 @@
           </div>
         </article>
         <article class="card">
-          <img src="/img/card2-image.svg" alt="Plate with Healthy Food" />
+          <img src="/img/card.svg" alt="Plate with Healthy Food" />
           <div class="card-content">
             <div class="card-labels">
               <span class="label">Fitness</span>
@@ -141,7 +147,7 @@
           </div>
         </article>
         <article class="card">
-          <img src="/img/card3-image.svg" alt="Football Ball" />
+          <img src="/img/card.svg" alt="Football Ball" />
           <div class="card-content">
             <div class="card-labels">
               <span class="label">Fotbal</span>
@@ -206,7 +212,7 @@
 
     <div class="container">
       <div class="event large">
-        <img src="https://picsum.photos/150" alt="Event Image" />
+        <img src="/img/event.svg" alt="Event Image" />
         <div class="date">Út<br /><strong>06</strong><br />Úno 2024</div>
         <button class="tag">Fotbal</button>
         <h3>Mistrovství světa</h3>
@@ -215,7 +221,7 @@
         <a href="#">Zobrazit událost </a>
       </div>
       <div class="event large">
-        <img src="https://picsum.photos/150" alt="Event Image" />
+        <img src="/img/event.svg" alt="Event Image" />
         <div class="date">Út<br /><strong>06</strong><br />Úno 2024</div>
         <button class="tag">Fotbal</button>
         <h3>Mistrovství světa</h3>
@@ -224,7 +230,7 @@
         <a href="#">Zobrazit událost </a>
       </div>
       <div class="event">
-        <img src="https://picsum.photos/150" alt="Event Image" />
+        <img src="/img/event.svg" alt="Event Image" />
         <div class="date">Čt<br /><strong>08</strong><br />Úno 2024</div>
         <button class="tag">Atletika</button>
         <h3>Mistrovství Evropy</h3>
@@ -233,7 +239,7 @@
         <a href="#">Zobrazit událost</a>
       </div>
       <div class="event">
-        <img src="https://picsum.photos/150" alt="Event Image" />
+        <img src="/img/event.svg" alt="Event Image" />
         <div class="date">Čt<br /><strong>08</strong><br />Úno 2024</div>
         <button class="tag">Atletika</button>
         <h3>Mistrovství Evropy</h3>
@@ -242,7 +248,7 @@
         <a href="#">Zobrazit událost </a>
       </div>
       <div class="event">
-        <img src="https://picsum.photos/150" alt="Event Image" />
+        <img src="/img/event.svg" alt="Event Image" />
         <div class="date">Čt<br /><strong>08</strong><br />Úno 2024</div>
         <button class="tag">Atletika</button>
         <h3>Mistrovství Evropy</h3>
@@ -252,7 +258,7 @@
       </div>
 
       <div class="event">
-        <img src="https://picsum.photos/150" alt="Event Image" />
+        <img src="/img/event.svg" alt="Event Image" />
         <div class="date">Čt<br /><strong>08</strong><br />Úno 2024</div>
         <button class="tag">Atletika</button>
         <h3>Mistrovství Evropy</h3>
@@ -261,7 +267,7 @@
         <a href="#">Zobrazit událost </a>
       </div>
       <div class="event">
-        <img src="https://picsum.photos/150" alt="Event Image" />
+        <img src="/img/event.svg" alt="Event Image" />
         <div class="date">Čt<br /><strong>08</strong><br />Úno 2024</div>
         <button class="tag">Atletika</button>
         <h3>Mistrovství Evropy</h3>
@@ -270,7 +276,7 @@
         <a href="#">Zobrazit událost </a>
       </div>
       <div class="event">
-        <img src="https://picsum.photos/150" alt="Event Image" />
+        <img src="/img/event.svg" alt="Event Image" />
         <div class="date">Čt<br /><strong>08</strong><br />Úno 2024</div>
         <button class="tag">Atletika</button>
         <h3>Mistrovství Evropy</h3>
