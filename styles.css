@@ -30,12 +30,6 @@ a {
   height: 1.875rem;
   margin-right: 0.625rem;
 }
-
-.search-input {
-  --pad: 0.75rem;
-  position: relative;
-}
-
 .search-box {
   --pad: 0.75rem;
   position: relative;
@@ -174,20 +168,6 @@ a {
   width: 100%;
 }
 
-#check {
-  display: none;
-}
-@media (max-width: 610px) {
-  .menu li {
-    margin-top: 40px;
-  }
-  .menu li a {
-    padding: 10px;
-  }
-  #check:checked ~ .menu {
-    right: 0;
-  }
-}
 input {
   padding: var(--pad);
   border: 1px solid #eee;
@@ -220,6 +200,11 @@ label {
   color: #333;
   margin-bottom: 20px;
 }
+
+.hero-image img {
+  height: auto;
+  width: auto;
+}
 .buttons {
   display: flex;
   justify-content: center;
@@ -244,7 +229,7 @@ label {
   height: auto;
   border-radius: 10px;
   overflow: hidden;
-  width: 30rem;
+  padding-block: 0 5rem;
   object-fit: cover;
   margin-right: 1rem;
 }
@@ -252,7 +237,6 @@ label {
 .hero-image-container {
   display: flex;
   align-items: center;
-  width: 200rem;
 }
 
 aside {
@@ -522,8 +506,8 @@ footer {
   align-items: center;
   padding: 20px;
   gap: 5rem;
-  justify-content: center;
   background-color: #f8f8f8;
+  justify-content: space-evenly;
 }
 .footer-columns > .footer-column {
   display: flex;
@@ -591,9 +575,7 @@ input:focus {
   .menu-toggle:checked + .menu-icon + .nav-links {
     display: flex;
   }
-  .menu-icon {
-    display: block;
-  }
+
   .search-box {
     width: 40px;
     height: 40px;
