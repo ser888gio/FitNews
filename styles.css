@@ -225,6 +225,7 @@ main {
   padding: 15px;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
 }
 .grid-item img {
   width: auto;
@@ -261,9 +262,7 @@ main {
 .article-description {
   margin-bottom: 10px;
 }
-.large-item {
-  flex-direction: row;
-}
+
 .card-container {
   display: flex;
   justify-content: center;
@@ -640,10 +639,19 @@ input:focus {
 .article-container {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start; /* Align items to the start of the container */
 }
-.article-aside {
-  flex: 1;
+.large-item {
+  flex: 1; /* Allow the large item to take up available space */
+  margin-right: 1rem;
 }
+aside {
+  width: 30%;
+  order: 2; /* Ensures aside comes after large-item */
+  margin-left: 1rem; /* Adds spacing between large-item and aside */
+}
+
+/* Responsive styles */
 @media (max-width: 768px) {
   .container {
     grid-template-columns: repeat(2, 1fr);
@@ -738,6 +746,27 @@ input:focus {
     transform: rotate(90deg);
     margin: -15rem;
     min-height: 35rem;
+  }
+  .grid-item {
+    flex-direction: row;
+  }
+  .grid-item img {
+    width: 50%;
+  }
+  .large-item {
+    flex-direction: column;
+  }
+  .article-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+  .large-item {
+    margin-right: 0; /* Remove the right margin */
+    margin-bottom: 1rem; /* Add some space below the large item */
+  }
+  aside {
+    width: 100%; /* Make the aside take up the full width */
+    margin-left: 0; /* Remove the left margin */
+    padding-left: 0; /* Remove the left padding */
   }
 }
 @media (max-width: 480px) {
