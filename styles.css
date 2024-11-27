@@ -450,11 +450,13 @@ main {
 .right-section button:hover {
   background-color: #f0f0f0;
 }
+
 .divider {
   width: 2px;
-  height: 100px;
+  height: 20rem;
   background-color: #d0d0d0;
-  margin: 0 20px;
+  margin: 0 50px;
+  transform: rotate(30deg);
 }
 .right-section p {
   margin-bottom: 20px;
@@ -731,6 +733,11 @@ input:focus {
   }
   .container-subscription {
     flex-direction: column;
+  }
+  .divider {
+    transform: rotate(90deg);
+    margin: -15rem;
+    min-height: 35rem;
   }
 }
 @media (max-width: 480px) {
