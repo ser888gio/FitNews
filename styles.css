@@ -247,6 +247,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 3;
 }
 .article-title {
   font-size: 18px;
@@ -690,6 +691,15 @@ footer {
 }
 input:focus {
   outline: thick double #32a1ce;
+}
+.article-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-aside {
+  flex: 1;
+  margin-left: 20px;
 }
 @media (max-width: 768px) {
   .container {
