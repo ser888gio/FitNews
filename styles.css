@@ -262,7 +262,6 @@ main {
 .article-description {
   margin-bottom: 10px;
 }
-
 .card-container {
   display: flex;
   justify-content: center;
@@ -449,7 +448,6 @@ main {
 .right-section button:hover {
   background-color: #f0f0f0;
 }
-
 .divider {
   width: 2px;
   height: 20rem;
@@ -639,19 +637,17 @@ input:focus {
 .article-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Align items to the start of the container */
+  align-items: flex-start;
 }
 .large-item {
-  flex: 1; /* Allow the large item to take up available space */
+  flex: 1;
   margin-right: 1rem;
 }
 aside {
   width: 30%;
-  order: 2; /* Ensures aside comes after large-item */
-  margin-left: 1rem; /* Adds spacing between large-item and aside */
+  order: 2;
+  margin-left: 1rem;
 }
-
-/* Responsive styles */
 @media (max-width: 768px) {
   .container {
     grid-template-columns: repeat(2, 1fr);
@@ -757,16 +753,16 @@ aside {
     flex-direction: column;
   }
   .article-container {
-    flex-direction: column; /* Stack items vertically on smaller screens */
+    flex-direction: column;
   }
   .large-item {
-    margin-right: 0; /* Remove the right margin */
-    margin-bottom: 1rem; /* Add some space below the large item */
+    margin-right: 0;
+    margin-bottom: 1rem;
   }
   aside {
-    width: 100%; /* Make the aside take up the full width */
-    margin-left: 0; /* Remove the left margin */
-    padding-left: 0; /* Remove the left padding */
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
   }
 }
 @media (max-width: 480px) {
