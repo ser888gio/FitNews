@@ -5,6 +5,12 @@ body {
   min-height: 100vh;
   background-color: #f8f8f8;
   position: relative;
+
+  --background-white: #fdfdfd;
+  --background-grey: #ececec;
+  --background-label: #ecfdf3;
+  --primary-text: #313131;
+  --secondary-text: #919191;
 }
 a {
   text-decoration: none;
@@ -15,7 +21,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #f3f3f3;
+  background-color: var(--background-grey);
   border-bottom: 0.125rem solid #333;
 }
 .header .logo {
@@ -62,7 +68,6 @@ a {
   cursor: pointer;
 }
 .email-input {
-  padding: var(--pad);
   border-radius: 0.5rem;
   border: 1px solid #eee;
   color: inherit;
@@ -160,15 +165,12 @@ a {
   width: 100%;
 }
 input {
-  padding: var(--pad);
   border: 1px solid #eee;
   color: inherit;
   width: 300px;
   outline: 0;
 }
 label {
-  left: var(--pad);
-  top: var(--pad);
   padding-inline: 0.3em;
   transition: transform 0.2s;
   pointer-events: none;
@@ -341,7 +343,7 @@ main {
   width: 100%;
   text-align: center;
   padding-block: 2.5rem 1.25rem;
-  background-color: #e9f6f2;
+  background-color: var(--background-label);
 }
 .categories-section h2 {
   font-size: 2rem;
@@ -408,10 +410,10 @@ main {
 .container-subscription {
   display: flex;
   align-items: center;
-  background-color: #fff;
   padding: 20px;
   text-align: center;
   justify-content: center;
+  background: linear-gradient(to right, #8cc91e 29%, #0ba6f4 100%);
 }
 .buttons {
   justify-content: center;
@@ -582,7 +584,7 @@ main {
   margin-top: 5px;
 }
 footer {
-  background-color: #fff;
+  background-color: var(--background-grey);
   color: #333;
   width: 100%;
   left: 0;
@@ -595,7 +597,6 @@ footer {
   position: relative;
   padding: 20px;
   gap: 5rem;
-  background-color: #f8f8f8;
   justify-content: center;
 }
 .footer-columns > .footer-column {
