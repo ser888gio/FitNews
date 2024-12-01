@@ -91,6 +91,7 @@ a {
   position: relative;
   padding: 0.75rem 1.25rem;
   width: inherit;
+  box-sizing: border-box;
 }
 .nav-links li a {
   display: inline-block;
@@ -461,10 +462,12 @@ time {
   border-radius: 5px;
   padding: 5px 10px;
   margin: 0.5rem;
+  margin-left: 0;
   outline: solid 1px #000;
 }
 .article-inline {
   display: inline-flex;
+  width: fit-content;
 }
 .info h2 {
   font-size: 18px;
@@ -597,12 +600,13 @@ input:focus {
 .sidebar-nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   align-items: center;
   background-color: var(--background-grey);
   border-bottom: 0.125rem solid #333;
   padding: 0.75rem 1.25rem;
+  box-sizing: border-box;
 }
 .large-item {
   flex: 1;
