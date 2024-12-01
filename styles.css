@@ -1,10 +1,18 @@
+* {
+  outline: 1px solid #f00 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  width: 100vw;
   background-color: #f8f8f8;
   position: relative;
+  overflow-x: hidden;
   --background-white: #fdfdfd;
   --background-grey: #ececec;
   --background-label: #ecfdf3;
@@ -22,6 +30,7 @@ a {
   justify-content: space-around;
   background-color: var(--background-grey);
   border-bottom: 0.125rem solid #333;
+  width: 100vw;
 }
 .header .logo {
   display: flex;
@@ -75,13 +84,13 @@ a {
   font-size: 1rem;
 }
 .nav-links {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
   position: relative;
   padding: 0.75rem 1.25rem;
+  width: inherit;
 }
 .nav-links li a {
   display: inline-block;
@@ -203,7 +212,6 @@ label {
   transform-origin: left;
   translate: -0.3em;
 }
-
 .hero h1 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -219,12 +227,12 @@ label {
   height: auto;
   width: auto;
 }
-
 main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px;
+  gap: 1rem;
+  padding: 1.5rem;
+  margin: auto;
 }
 .section-title {
   font-weight: 700;
@@ -239,6 +247,8 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  min-height: 0;
+  min-width: 0;
 }
 .article-main {
   display: flex;
@@ -271,13 +281,11 @@ time {
 .article-description {
   margin-bottom: 10px;
 }
-
 .card img {
   width: 10rem;
   height: 10rem;
   object-fit: cover;
 }
-
 .view-more-article {
   width: fit-content;
   display: inline-block;
@@ -290,7 +298,6 @@ time {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 .categories-section {
   width: 100%;
   text-align: center;
@@ -338,7 +345,6 @@ time {
   font-size: 0.9rem;
   color: #333;
 }
-
 .event img {
   width: 100%;
   height: auto;
@@ -427,7 +433,8 @@ time {
   padding: 15px;
   text-align: center;
   width: calc(100% - 20px);
-  height: calc(100vh - 20px);
+  align-items: center;
+  justify-content: center;
 }
 .carousel-item img {
   width: 100%;
@@ -436,7 +443,12 @@ time {
 }
 .date {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 1.5rem;
+  outline: solid 1px #000;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5rem;
 }
 .date span {
   display: block;
@@ -582,7 +594,6 @@ footer {
 input:focus {
   outline: thick double #32a1ce;
 }
-
 .sidebar-nav {
   display: flex;
   flex-direction: row;
@@ -597,7 +608,6 @@ input:focus {
   flex: 1;
   flex-direction: row;
 }
-
 .right-menu-side {
   display: flex;
 }
@@ -608,11 +618,9 @@ input:focus {
   .menu-button {
     display: block;
   }
-
   .sidebar-menu {
     width: 100%;
   }
-
   .header .menu {
     display: none;
     flex-direction: column;
@@ -692,6 +700,8 @@ input:focus {
     display: flex;
     flex-direction: column;
     max-width: 800px;
+    margin: 0 auto;
+    gap: 1rem;
   }
   .footer-logo {
     width: 50%;
@@ -703,6 +713,7 @@ input:focus {
     transform: rotate(90deg);
     margin: -15rem;
     min-height: 35rem;
+    display: none;
   }
   .grid-item {
     flex-direction: row;
@@ -714,7 +725,6 @@ input:focus {
     flex-direction: column;
     align-items: center;
   }
-
   .menu-button {
     display: block;
     right: 1rem;
@@ -726,7 +736,6 @@ input:focus {
     flex-direction: column;
     align-items: flex-start;
   }
-
   .footer-column {
     margin: 10px 0;
   }
