@@ -36,21 +36,63 @@
         <div class="menu hideOnMobile">
           <a href="#">Domovská stránka</a>
           <div class="dropdown">
-            <a href="#" class="dropdown-toggle">Kategorie</a>
-            <div class="dropdown-menu">
-              <div class="dropdown-col-1">
-                <a href="#">Fotbal</a>
-                <a href="#">Basketbal</a>
-                <a href="#">Rugby</a>
-                <a href="#">Baseball</a>
+            <div class="dropdown-toggle">Kategorie</div>
+            <ul class="dropdown-menu">
+              <li class="dropdown-col">
+                <li>
+                  Fotbal
+                  <img
+                    src="/img/dropdownIcons/football.svg"
+                    alt="Football icon"
+                  />
+                </li>
+                <li>
+                  Basketbal
+                  <img
+                    src="/img/dropdownIcons/basketball.svg"
+                    alt="Basketball icon"
+                  />
+                </li>
+                <li>
+                  Rugby
+                  <img src="/img/dropdownIcons/rugby.svg" alt="Rugby icon" />
+                </li>
+                <li>
+                  Baseball
+                  <img
+                    src="/img/dropdownIcons/baseball.svg"
+                    alt="Baseball logo"
+                  />
+                </li>
+              </li>
+              <div class="dropdown-col">
+                <div>
+                  Bowling
+                  <img
+                    src="/img/dropdownIcons/bowling.svg"
+                    alt="Bowling icon"
+                  />
+                </div>
+                <div>
+                  Tennis
+                  <img src="/img/dropdownIcons/tennis.svg" alt="Tennis icon" />
+                </div>
+                <div>
+                  Fitness
+                  <img
+                    src="/img/dropdownIcons/dumbell.svg"
+                    alt="Fitness icon"
+                  />
+                </div>
+                <div>
+                  Životní styl
+                  <img
+                    src="/img/dropdownIcons/fitness.svg"
+                    alt="Lifestyle icon"
+                  />
+                </div>
               </div>
-              <div class="dropdown-col-2">
-                <a href="#">Bowling</a>
-                <a href="#">Tennis</a>
-                <a href="#">Fitness</a>
-                <a href="#">Životní styl</a>
-              </div>
-            </div>
+            </ul>
           </div>
           <a href="#">Předplatné</a>
           <a href="#">O nás</a>
@@ -60,7 +102,7 @@
           <div class="search-box">
             <input
               type="text"
-              class="search-input"
+              id="search-input"
               placeholder="Vyhledat"
               aria-label="Search Input"
             />
@@ -82,11 +124,11 @@
               <div class="search-box">
                 <input
                   type="text"
-                  class="search-input"
+                  id="search-input-sidebar"
                   placeholder="Vyhledat"
                   aria-label="Search Input"
                 />
-                <label for="search-input" class="search-icon">
+                <label for="search-input-sidebar" class="search-icon">
                   <img src="/img/search-icon.svg" alt="Search icon" />
                 </label>
               </div>
@@ -96,26 +138,78 @@
             </div>
           </nav>
 
-          <a href="#">Domovská stránka</a>
-          <div class="dropdown">
-            <a href="#" class="dropdown-toggle">Kategorie</a>
-            <div class="dropdown-menu">
-              <div class="dropdown-col-1">
-                <a href="#">Fotbal</a>
-                <a href="#">Basketbal</a>
-                <a href="#">Rugby</a>
-                <a href="#">Baseball</a>
-              </div>
-              <div class="dropdown-col-2">
-                <a href="#">Bowling</a>
-                <a href="#">Tennis</a>
-                <a href="#">Fitness</a>
-                <a href="#">Životní styl</a>
-              </div>
+          <ul class="sidebar-menu-options">
+            <li onclick="hideSidebar()">
+              Domovská stránka
+              <img src="/img/home.svg" alt="Home icon" />
+            </li>
+            <div class="dropdown">
+              <li class="dropdown-toggle" onclick="toggleDropdown(this)">
+                Kategorie
+                <img src="/img/dropdown.svg" alt="dropdown icon" />
+              </li>
+              <ul class="dropdown-menu">
+                <li>
+                  Fotbal
+                  <img
+                    src="/img/dropdownIcons/football.svg"
+                    alt="Football icon"
+                  />
+                </li>
+                <li>
+                  Basketbal
+                  <img
+                    src="/img/dropdownIcons/basketball.svg"
+                    alt="Basketball icon"
+                  />
+                </li>
+                <li>
+                  Rugby
+                  <img src="/img/dropdownIcons/rugby.svg" alt="Rugby icon" />
+                </li>
+                <li>
+                  Baseball
+                  <img
+                    src="/img/dropdownIcons/baseball.svg"
+                    alt="Baseball logo"
+                  />
+                </li>
+                <li>
+                  Bowling
+                  <img
+                    src="/img/dropdownIcons/bowling.svg"
+                    alt="Bowling icon"
+                  />
+                </li>
+                <li>
+                  Tennis
+                  <img src="/img/dropdownIcons/tennis.svg" alt="Tennis icon" />
+                </li>
+                <li>
+                  Fitness
+                  <img
+                    src="/img/dropdownIcons/dumbell.svg"
+                    alt="Fitness icon"
+                  />
+                </li>
+                <li>
+                  Životní styl
+                  <img
+                    src="/img/dropdownIcons/fitness.svg"
+                    alt="Lifestyle icon"
+                  />
+                </li>
+              </ul>
             </div>
-          </div>
-          <a href="#">Předplatné</a>
-          <a href="#">O nás</a>
+            <li>
+              Předplatné
+              <img src="/img/subscription.svg" alt="Subscription icon" />
+            </li>
+            <li>
+              O nás
+              <img src="/img/aboutUs.svg" alt="About icon" />
+            </li>
+          </ul>
         </div>
       </nav>
     </header>
@@ -252,7 +346,7 @@
 
       <div class="category-container">
         <div class="category-card">
-          <img src="/img/football-icon.svg" alt="Football icon" />
+          <img src="/img/dropdownIcons/football.svg" alt="Football icon" />
           <h3>Fotbalové zprávy</h3>
           <p>
             Nejnovější informace a analýzy z fotbalového světa, které vás udrží
@@ -261,7 +355,7 @@
         </div>
 
         <div class="category-card">
-          <img src="/img/basketball-icon.svg" alt="Basketball icon" />
+          <img src="/img/dropdownIcons/basketball.svg" alt="Basketball icon" />
           <h3>Basketbalové novinky</h3>
           <p>
             Sledujte vzrušující zápasy a příběhy z basketbalových lig po celém
@@ -270,7 +364,7 @@
         </div>
 
         <div class="category-card">
-          <img src="/img/dumbell-icon.svg" alt="Dumbell icon" />
+          <img src="/img/dropdownIcons/dumbell.svg" alt="Dumbell icon" />
           <h3>Fitness trendy</h3>
           <p>
             Objevte nejnovější fitness trendy a tipy pro zdravý životní styl.
@@ -392,6 +486,12 @@
           </div>
         </div>
       </div>
+      <button class="carousel-button">
+        <img src="/img/arrowLeft.svg" alt="Arrow Left" />
+      </button>
+      <button class="carousel-button">
+        <img src="/img/arrowRight.svg" alt="Arrow right" />
+      </button>
     </div>
 
     <div class="newsletter-hero">
@@ -463,6 +563,10 @@
         sidebar.style.display = "none";
         const menuBar = document.querySelector(".menu-button");
         menuBar.style.display = "flex";
+      }
+      function toggleDropdown(element) {
+        const dropdown = element.closest(".dropdown");
+        dropdown.classList.toggle("active");
       }
     </script>
   </body>
