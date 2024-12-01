@@ -21,7 +21,6 @@
     <meta property="og:type" content="website" />
 
     <link rel="preload" href="styles.css" as="style" />
-    <link rel="preload" href="img/hero-image.svg" as="image" />
     <link rel="preload" href="img/card.svg" as="image" />
     <link rel="preload" href="img/event.svg" as="image" />
 
@@ -34,7 +33,7 @@
         <div class="logo">
           <img src="./img/logo.svg" alt="FitNews logo" />
         </div>
-        <div class="menu">
+        <div class="menu hideOnMobile">
           <a href="#">Domovská stránka</a>
           <div class="dropdown">
             <a href="#" class="dropdown-toggle">Kategorie</a>
@@ -56,16 +55,67 @@
           <a href="#">Předplatné</a>
           <a href="#">O nás</a>
         </div>
-        <div class="search-box">
-          <input
-            type="text"
-            id="search-input"
-            placeholder="Vyhledat"
-            aria-label="Search Input"
-          />
-          <label for="search-input" class="search-icon">
-            <img src="/img/search-icon.svg" alt="Search icon" />
-          </label>
+
+        <div class="right-menu-side">
+          <div class="search-box">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Vyhledat"
+              aria-label="Search Input"
+            />
+            <label for="search-input" class="search-icon">
+              <img src="/img/search-icon.svg" alt="Search icon" />
+            </label>
+          </div>
+          <button class="menu-button" onclick="showSidebar()">
+            <img src="/img/menu-icon.svg" alt="Menu icon" />
+          </button>
+        </div>
+
+        <div class="sidebar-menu">
+          <nav class="sidebar-nav">
+            <div class="logo">
+              <img src="./img/logo.svg" alt="FitNews logo" />
+            </div>
+            <div class="right-menu-side">
+              <div class="search-box">
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Vyhledat"
+                  aria-label="Search Input"
+                />
+                <label for="search-input" class="search-icon">
+                  <img src="/img/search-icon.svg" alt="Search icon" />
+                </label>
+              </div>
+              <button class="close-icon" onclick="hideSidebar()">
+                <img src="/img/close-menu-icon.svg" alt="Close icon" />
+              </button>
+            </div>
+          </nav>
+
+          <a href="#">Domovská stránka</a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">Kategorie</a>
+            <div class="dropdown-menu">
+              <div class="dropdown-col-1">
+                <a href="#">Fotbal</a>
+                <a href="#">Basketbal</a>
+                <a href="#">Rugby</a>
+                <a href="#">Baseball</a>
+              </div>
+              <div class="dropdown-col-2">
+                <a href="#">Bowling</a>
+                <a href="#">Tennis</a>
+                <a href="#">Fitness</a>
+                <a href="#">Životní styl</a>
+              </div>
+            </div>
+          </div>
+          <a href="#">Předplatné</a>
+          <a href="#">O nás</a>
         </div>
       </nav>
     </header>
@@ -73,11 +123,14 @@
     <main>
       <h1 class="section-title">Nejnovější články:</h1>
       <article class="article-main grid-item large-item">
-        <img src="/img/card.svg" alt="Main article image" />
+        <img src="/img/card.svg" alt="Newest item" />
         <div class="article-content">
           <div>
             <h2 class="article-title">Jak zlepšit svou výkonnost</h2>
-            <p class="article-meta">14. 11. 2024</p>
+            <div class="article-inline">
+              <span class="badge">Fotbal</span>
+              <p class="article-meta">11. 11. 2024</p>
+            </div>
             <p class="article-description">
               Tipy pro zlepšení vaší sportovní výkonnosti a zdraví.
             </p>
@@ -90,7 +143,10 @@
         <div class="article-content">
           <div>
             <h2 class="article-title">Zdravé stravování pro aktivní život</h2>
-            <p class="article-meta">11. 11. 2024</p>
+            <div class="article-inline">
+              <span class="badge">Fotbal</span>
+              <p class="article-meta">11. 11. 2024</p>
+            </div>
             <p>Výživná strava je klíčem k vyšší energii a lepší kondici...</p>
           </div>
         </div>
@@ -100,7 +156,10 @@
         <div class="article-content">
           <div>
             <h2 class="article-title">Real Madrid: Nezastavitelná Síla</h2>
-            <p class="article-meta">12. 11. 2024</p>
+            <div class="article-inline">
+              <span class="badge">Fotbal</span>
+              <p class="article-meta">11. 11. 2024</p>
+            </div>
             <p>Real Madrid opět předvádí svou dominanci na hřišti...</p>
           </div>
         </div>
@@ -110,29 +169,32 @@
         <div class="article-content">
           <div>
             <h2 class="article-title">Tréninkové metody pro mladé hráče</h2>
-            <p class="article-meta">10. 11. 2024</p>
+            <div class="article-inline">
+              <span class="badge">Fotbal</span>
+              <p class="article-meta">11. 11. 2024</p>
+            </div>
             <p>Moderní tréninkové metody pomáhají mládežnickým...</p>
           </div>
         </div>
       </article>
-      <button class="view-more-article">Zobrazit vše</button>
+      <div class="button-position">
+        <button class="view-more-article">Zobrazit vše</button>
+      </div>
 
       <h2 class="section-title">Nejpopulárnější články:</h2>
 
       <article class="article-main grid-item large-item">
-        <div class="article-container">
-          <div class="article-content">
-            <img src="/img/card.svg" alt="Popular article image" />
-            <div>
-              <h2 class="article-title">Manchester City na cestě za titulem</h2>
-              <p class="article-meta">14. 11. 2024</p>
-              <p class="article-description">
-                Tým Pepa Guardioly opět nastavuje standardy v Premier League...
-              </p>
+        <img src="/img/card.svg" alt="Main article" />
+        <div class="article-content">
+          <div>
+            <h2 class="article-title">Manchester City na cestě za titulem</h2>
+            <div class="article-inline">
+              <span class="badge">Fotbal</span>
+              <p class="article-meta">11. 11. 2024</p>
             </div>
-            <aside class="article-aside">
-              Nejčtenější článek za posledních 24h.
-            </aside>
+            <p class="article-description">
+              Tým Pepa Guardioly opět nastavuje standardy v Premier League...
+            </p>
           </div>
         </div>
       </article>
@@ -142,7 +204,10 @@
         <div class="article-content">
           <div>
             <h2 class="article-title">Krejčí opouští Spartu</h2>
-            <p class="article-meta">9. 11. 2024</p>
+            <div class="article-inline">
+              <span class="badge">Fotbal</span>
+              <p class="article-meta">11. 11. 2024</p>
+            </div>
             <p>Letenský Krejčí končí ve Spartě...</p>
           </div>
         </div>
@@ -152,7 +217,10 @@
         <div class="article-content">
           <div>
             <h2 class="article-title">Djokovičův Vítězný Návrat</h2>
-            <p class="article-meta">11. 11. 2024</p>
+            <div class="article-inline">
+              <span class="badge">Fotbal</span>
+              <p class="article-meta">11. 11. 2024</p>
+            </div>
             <p>Djokovič triumfuje na kurty po zranění...</p>
           </div>
         </div>
@@ -162,12 +230,17 @@
         <div class="article-content">
           <div>
             <h2 class="article-title">Curryho tříbodový zázrak</h2>
-            <p class="article-meta">13. 11. 2024</p>
+            <div class="article-inline">
+              <span class="badge">Fotbal</span>
+              <p class="article-meta">11. 11. 2024</p>
+            </div>
             <p>Stephen Curry zlomil rekordy s neuvěřitelným výkonem...</p>
           </div>
         </div>
       </article>
-      <button class="view-more-article">Zobrazit vše</button>
+      <div class="button-position">
+        <button class="view-more-article">Zobrazit vše</button>
+      </div>
     </main>
 
     <div class="categories-section">
@@ -249,7 +322,7 @@
             <span>Úno 2024</span>
           </div>
           <div class="info">
-            <button class="tag">Fotbal</button>
+            <span class="badge">Fotbal</span>
             <h2>Mistrovství světa</h2>
             <p>Londýn</p>
             <p>Největší fotbalový turnaj na světě začíná v Londýně.</p>
@@ -265,7 +338,7 @@
             <span>Úno 2024</span>
           </div>
           <div class="info">
-            <button class="tag">Basketbal</button>
+            <span class="badge">Basketbal</span>
             <h2>Finále NBA</h2>
             <p>New York</p>
             <p>Nejlepší týmy se utkají o titul šampiona NBA.</p>
@@ -281,7 +354,7 @@
             <span>Úno 2024</span>
           </div>
           <div class="info">
-            <button class="tag">Atletika</button>
+            <span class="badge">Atletika</span>
             <h2>Mistrovství Evropy</h2>
             <p>Paříž</p>
             <p>Atleti z celé Evropy se sjedou do Paříže na mistrovství.</p>
@@ -296,7 +369,7 @@
             <span>Úno 2024</span>
           </div>
           <div class="info">
-            <button class="tag">Atletika</button>
+            <span class="badge">Atletika</span>
             <h2>Mistrovství Evropy</h2>
             <p>Paříž</p>
             <p>Atleti z celé Evropy se sjedou do Paříže na mistrovství.</p>
@@ -311,7 +384,7 @@
             <span>Úno 2024</span>
           </div>
           <div class="info">
-            <button class="tag">Atletika</button>
+            <span class="badge">Atletika</span>
             <h2>Mistrovství Evropy</h2>
             <p>Paříž</p>
             <p>Atleti z celé Evropy se sjedou do Paříže na mistrovství.</p>
@@ -377,5 +450,20 @@
         </p>
       </div>
     </footer>
+
+    <script>
+      function showSidebar() {
+        const sidebar = document.querySelector(".sidebar-menu");
+        sidebar.style.display = "flex";
+        const menuBar = document.querySelector(".menu-button");
+        menuBar.style.display = "none";
+      }
+      function hideSidebar() {
+        const sidebar = document.querySelector(".sidebar-menu");
+        sidebar.style.display = "none";
+        const menuBar = document.querySelector(".menu-button");
+        menuBar.style.display = "flex";
+      }
+    </script>
   </body>
 </html>
