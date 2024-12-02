@@ -12,6 +12,10 @@ body {
   --background-label: #ecfdf3;
   --primary-text: #313131;
   --secondary-text: #919191;
+
+  --font-sm: 1rem;
+  --font-md: 1.125rem;
+  --font-lg: 1.5rem;
 }
 a {
   text-decoration: none;
@@ -66,7 +70,7 @@ a {
 .header .search-box button {
   background: 0 0;
   border: none;
-  font-size: 16px;
+  font-size: var(--font-sm);
   cursor: pointer;
 }
 .email-input {
@@ -75,7 +79,7 @@ a {
   color: inherit;
   width: auto;
   outline: 0;
-  font-size: 1rem;
+  font-size: var(--font-md);
 }
 .nav-links {
   display: flex;
@@ -228,7 +232,7 @@ label {
   margin-bottom: 10px;
 }
 .hero p {
-  font-size: 1rem;
+  font-size: var(--font-sm);
   color: #333;
   margin-bottom: 20px;
 }
@@ -278,12 +282,12 @@ main {
   margin-left: 1rem;
 }
 .article-title {
-  font-size: 18px;
+  font-size: var(--font-md);
   font-weight: 700;
   margin-bottom: 10px;
 }
 time {
-  font-size: 14px;
+  font-size: var(--font-sm);
   color: #595959;
   margin: auto;
 }

@@ -20,7 +20,6 @@
     <meta property="og:image" content="/images/social-share.jpg" />
     <meta property="og:type" content="website" />
 
-    <link rel="preload" href="styles.css" as="style" />
     <link rel="preload" href="img/card.svg" as="image" />
     <link rel="preload" href="img/event.svg" as="image" />
 
@@ -28,7 +27,7 @@
     <title>FitNews</title>
   </head>
   <body>
-    <header class="header" role="banner">
+    <header class="header">
       <nav class="nav-links">
         <div class="logo">
           <img src="./img/logo.svg" alt="FitNews logo" />
@@ -37,8 +36,9 @@
           <a href="#">Domovská stránka</a>
           <div class="dropdown">
             <div class="dropdown-toggle">Kategorie</div>
-            <ul class="dropdown-menu">
-              <li class="dropdown-col">
+
+            <div class="dropdown-menu">
+              <ul class="dropdown-col">
                 <li>
                   Fotbal
                   <img
@@ -64,35 +64,35 @@
                     alt="Baseball logo"
                   />
                 </li>
-              </li>
-              <div class="dropdown-col">
-                <div>
+              </ul>
+              <ul class="dropdown-col">
+                <li>
                   Bowling
                   <img
                     src="/img/dropdownIcons/bowling.svg"
                     alt="Bowling icon"
                   />
-                </div>
-                <div>
+                </li>
+                <li>
                   Tennis
                   <img src="/img/dropdownIcons/tennis.svg" alt="Tennis icon" />
-                </div>
-                <div>
+                </li>
+                <li>
                   Fitness
                   <img
                     src="/img/dropdownIcons/dumbell.svg"
                     alt="Fitness icon"
                   />
-                </div>
-                <div>
+                </li>
+                <li>
                   Životní styl
                   <img
                     src="/img/dropdownIcons/fitness.svg"
                     alt="Lifestyle icon"
                   />
-                </div>
-              </div>
-            </ul>
+                </li>
+              </ul>
+            </div>
           </div>
           <a href="#">Předplatné</a>
           <a href="#">O nás</a>
@@ -138,16 +138,16 @@
             </div>
           </nav>
 
-          <ul class="sidebar-menu-options">
-            <li onclick="hideSidebar()">
+          <div class="sidebar-menu-options">
+            <div onclick="hideSidebar()">
               Domovská stránka
               <img src="/img/home.svg" alt="Home icon" />
-            </li>
+            </div>
             <div class="dropdown">
-              <li class="dropdown-toggle" onclick="toggleDropdown(this)">
+              <div class="dropdown-toggle" onclick="toggleDropdown(this)">
                 Kategorie
                 <img src="/img/dropdown.svg" alt="dropdown icon" />
-              </li>
+              </div>
               <ul class="dropdown-menu">
                 <li>
                   Fotbal
@@ -201,15 +201,15 @@
                 </li>
               </ul>
             </div>
-            <li>
+            <div>
               Předplatné
               <img src="/img/subscription.svg" alt="Subscription icon" />
-            </li>
-            <li>
+            </div>
+            <div>
               O nás
               <img src="/img/aboutUs.svg" alt="About icon" />
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
