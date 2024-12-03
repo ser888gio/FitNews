@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="cs">
   <head>
     <meta charset="UTF-8" />
@@ -32,71 +32,98 @@
         <div class="logo">
           <img src="./img/logo.svg" alt="FitNews logo" />
         </div>
-        <div class="menu hideOnMobile">
-          <a href="#">Domovská stránka</a>
-          <div class="dropdown">
-            <div class="dropdown-toggle">Kategorie</div>
+        <nav class="menu hideOnMobile">
+          <a href="#" class="menu-item">Domovská stránka</a>
+
+          <div class="dropdown menu-item" id="nav-dropdown">
+            <button
+              class="dropdown-toggle"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Kategorie
+            </button>
 
             <div class="dropdown-menu">
               <ul class="dropdown-col">
                 <li>
-                  Fotbal
-                  <img
-                    src="/img/dropdownIcons/football.svg"
-                    alt="Football icon"
-                  />
+                  <a href="#"
+                    >Fotbal
+                    <img
+                      src="/img/dropdownIcons/football.svg"
+                      alt="Football icon"
+                    />
+                  </a>
                 </li>
                 <li>
-                  Basketbal
-                  <img
-                    src="/img/dropdownIcons/basketball.svg"
-                    alt="Basketball icon"
-                  />
+                  <a href="#"
+                    >Basketbal
+                    <img
+                      src="/img/dropdownIcons/basketball.svg"
+                      alt="Basketball icon"
+                    />
+                  </a>
                 </li>
                 <li>
-                  Rugby
-                  <img src="/img/dropdownIcons/rugby.svg" alt="Rugby icon" />
+                  <a href="#"
+                    >Rugby
+                    <img src="/img/dropdownIcons/rugby.svg" alt="Rugby icon" />
+                  </a>
                 </li>
                 <li>
-                  Baseball
-                  <img
-                    src="/img/dropdownIcons/baseball.svg"
-                    alt="Baseball logo"
-                  />
+                  <a href="#"
+                    >Baseball
+                    <img
+                      src="/img/dropdownIcons/baseball.svg"
+                      alt="Baseball logo"
+                    />
+                  </a>
                 </li>
               </ul>
               <ul class="dropdown-col">
                 <li>
-                  Bowling
-                  <img
-                    src="/img/dropdownIcons/bowling.svg"
-                    alt="Bowling icon"
-                  />
+                  <a href="#"
+                    >Bowling
+                    <img
+                      src="/img/dropdownIcons/bowling.svg"
+                      alt="Bowling icon"
+                    />
+                  </a>
                 </li>
                 <li>
-                  Tennis
-                  <img src="/img/dropdownIcons/tennis.svg" alt="Tennis icon" />
+                  <a href="#"
+                    >Tennis
+                    <img
+                      src="/img/dropdownIcons/tennis.svg"
+                      alt="Tennis icon"
+                    />
+                  </a>
                 </li>
                 <li>
-                  Fitness
-                  <img
-                    src="/img/dropdownIcons/dumbell.svg"
-                    alt="Fitness icon"
-                  />
+                  <a href="#"
+                    >Fitness
+                    <img
+                      src="/img/dropdownIcons/dumbell.svg"
+                      alt="Fitness icon"
+                    />
+                  </a>
                 </li>
                 <li>
-                  Životní styl
-                  <img
-                    src="/img/dropdownIcons/fitness.svg"
-                    alt="Lifestyle icon"
-                  />
+                  <a href="#"
+                    >Životní styl
+                    <img
+                      src="/img/dropdownIcons/fitness.svg"
+                      alt="Lifestyle icon"
+                    />
+                  </a>
                 </li>
               </ul>
             </div>
           </div>
-          <a href="#">Předplatné</a>
-          <a href="#">O nás</a>
-        </div>
+
+          <a href="#" class="menu-item">Předplatné</a>
+          <a href="#" class="menu-item">O nás</a>
+        </nav>
 
         <div class="right-menu-side">
           <div class="search-box">
@@ -337,7 +364,7 @@
       </div>
     </main>
 
-    <div class="categories-section">
+    <section class="categories-section">
       <h2>Objevte naše hlavní sportovní kategorie</h2>
       <p>
         Naše platforma nabízí široké spektrum sportovních zpráv. Sledujte
@@ -380,7 +407,7 @@
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
     <div class="container-subscription">
       <div class="left-section">
@@ -494,7 +521,7 @@
       </button>
     </div>
 
-    <div class="newsletter-hero">
+    <section class="newsletter-hero">
       <div class="text-content">
         <h2>Přihlaste se k našemu newsletteru</h2>
         <p>
@@ -518,7 +545,11 @@
           Kliknutím na Přihlásit se souhlasíte s našimi Podmínkami a ujednáními.
         </p>
       </div>
-    </div>
+      <aside>
+        Black Friday nabídka, kterou nesmíte propasnout. Prvních 10 členů získá
+        dárek zdarma
+      </aside>
+    </section>
 
     <footer>
       <div class="footer-columns">
